@@ -1,0 +1,1 @@
+from functions.asma_extract.main import asma_extract

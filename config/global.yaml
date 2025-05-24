@@ -1,0 +1,5 @@
+urls:
+  asma_extract: "https://example.com/asma_extract"
+  asma_load: "https://example.com/asma_load"
+  psg_extract: "https://example.com/psg_extract"
+  psg_load: "https://example.com/psg_load"

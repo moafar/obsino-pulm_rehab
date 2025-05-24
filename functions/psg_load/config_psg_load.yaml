@@ -1,0 +1,4 @@
+onedrive_url: "https://onedrive.live.com/download?cid=XXXX&resid=XXXX"
+onedrive_sheet_name: "Hoja1"
+gspreadsheet_id: "SPREADSHEET_ID_DE_PSG_LOAD"
+gspreadsheet_sheet_name: "HojaDestino"

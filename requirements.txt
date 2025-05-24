@@ -1,0 +1,8 @@
+functions-framework
+pandas
+openpyxl
+gspread
+google-auth
+google-cloud-bigquery
+pyyaml
+python-dotenv

@@ -1,0 +1,6 @@
+gspreadsheet_id: "1XLxI_hb_tBCg8Ko7o6VPz1haLUlOf1L4IYmVgzNqQ7I"
+gspreadsheet_sheet_name: "Data"
+bq_project_id: "your_project_id"
+bq_dataset_id: "your_dataset_id"
+bq_table_id: "your_table_id"
+
