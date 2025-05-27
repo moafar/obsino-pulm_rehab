@@ -10,7 +10,7 @@ fi
 FUNC="$1"
 REGION="us-central1"
 RUNTIME="python311"
-MEMORY="512MB"
+MEMORY="1024MB"
 
 FUNC_PATH="functions/$FUNC/main.py"
 
