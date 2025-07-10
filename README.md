@@ -29,8 +29,6 @@ pulm-rehab/
 |----------------|-------------|
 | `asma_extract` | Extrae datos de asma desde archivos de entrada (OneDrive) y los copia en Google Sheets |
 | `asma_load`    | Carga datos procesados de asma en BigQuery |
-| `psg_extract`  | Extrae datos clínicos de polisomnografía |
-| `psg_load`     | Carga datos procesados de PSG en BigQuery |
 
 ## 🔗 Symlinks y código compartido
 

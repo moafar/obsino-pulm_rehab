@@ -4,7 +4,15 @@ import requests
 import pandas as pd
 from io import BytesIO
 
-def leer_excel_desde_url(url: str, sheet_name: str, names=None, skiprows: int = 0) -> pd.DataFrame:
+def leer_excel_desde_url(
+    url: str,
+    sheet_name: str,
+    names=None,
+    skiprows: int = 0,
+    col_final: str = "IZ"
+) -> pd.DataFrame:
+    usecols = f"A:{col_final}"
+    
     response = requests.get(url)
     response.raise_for_status()
     with BytesIO(response.content) as buffer:
@@ -14,5 +22,6 @@ def leer_excel_desde_url(url: str, sheet_name: str, names=None, skiprows: int = 
             engine="openpyxl",
             dtype=str,
             skiprows=skiprows,
-            names=names
+            names=names,
+            usecols=usecols
         )

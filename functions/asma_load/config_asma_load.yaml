@@ -2,47 +2,9 @@ gspreadsheet_id: "1XLxI_hb_tBCg8Ko7o6VPz1haLUlOf1L4IYmVgzNqQ7I"
 gspreadsheet_sheet_name: "Data"
 bq_project_id: "observatorio-ino-1"
 bq_dataset_id: "rehabilitacion_pulmonar"
-bq_table_id: "tbl_asma3"
+bq_table_id: "tbl_asma"
 campo_fecha_particion: "pte_fecha_ingreso_programa"
-campos_datetime:
+campos_date:
   - pte_fecha_nacimiento
-  - mes0_fecha_espirometria
-  - mes0_fecha_oscilometria
-  - mes0_fecha_feno
-  - mes0_fecha_prueba_broncoprobocacion
-  - mes0_fecha_valoracion_alergologia
-  - mes0_fecha_prick_test
-  - mes0_fecha_junta_asma_para_formulacion
-  - mes0_fecha_inicio_terapia_biologica
-  - mes0_fecha_ultimo_evento_adverso
-  - mes0_fecha_entrega_plan_accion
-  - mes1_fecha_entrega_educacion_tics_mes_1
-  - mes1_fecha_seguimiento_mes_1
-  - mes2_fecha_entrega_educacion_tics_mes_2
-  - mes2_fecha_seguimiento_mes_2
-  - mes3_fecha_entrega_educacion_tics_mes_3
-  - mes3_fecha_seguimiento
-  - mes3_fecha_real_cita_neumologia_3_mes
-  - mes3_fecha_confirmacion_diagnostica
-  - mes3_fecha_estudio_diagnostico_previo
-  - mes3_fecha_valoracion_nutricion
-  - mes3_fecha_seguimiento_nutricion
-  - mes3_fecha_valoracion_psicologia
-  - mes3_fecha_seguimiento_psicologia
-  - mes4_fecha_entrega_educacion_tics
-  - mes5_fecha_entrega_educacion_tics
-  - mes6_fecha_entrega_educacion_tics
-  - mes6_fecha_seguimiento
-  - mes6_fecha_real_cita_neumologia
-  - mes7_fecha_entrega_educacion_tics
-  - mes8_fecha_entrega_educacion_tics
-  - mes9_fecha_entrega_educacion_tics
-  - mes9_fecha_seguimiento_mes
-  - mes9_fecha_real_cita_neumologia
-  - mes10_fecha_entrega_educacion_tics
-  - mes11_fecha_entrega_educacion_tics
-  - mes12_fecha_entrega_educacion_tics
-  - mes12_fecha_seguimiento
-  - mes12_fecha_espirometria
-  - mes12_fecha_real_cita_neumologia
-  - mes13_fecha_entrega_educacion_tics
+  - pte_fecha_ingreso_programa
+  - total_fecha_egreso

@@ -14,6 +14,7 @@ def asma_load(request):
         # Cargar configuración desde archivo
         cfg = load_config("asma_load")
 
+        campos_date = cfg.get("campos_date", [])
         campos_datetime = cfg.get("campos_datetime", [])
         project_id = cfg.get("bq_project_id")
         dataset_id = cfg.get("bq_dataset_id")
@@ -33,9 +34,9 @@ def asma_load(request):
         data = request.get_json()
         # Debug: primer elemento recibido
         if data:
-            print("Primer registro recibido:", data[0])
+            print("[DEBUG] Primer registro recibido:", data[0])
         else:
-            print("No se recibieron datos.")
+            print("[DEBUG] No se recibieron datos.")
 
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -57,16 +58,27 @@ def asma_load(request):
             except ValueError:
                 return jsonify({"status": "error", "message": f"'{campo_fecha}' inválida en fila {i} ({fecha_raw})"}), 400
 
-        # ✅ Normalizar campos DATETIME según configuración
+        # Normalizar campos DATETIME según configuración
         data, error = normalizar_campos_datetime(data, campos_datetime)
         if error:
+            print(f"Error normalizando campos DATETIME: {error}")
             return error
 
+        # Forzar campos tipo DATE a formato YYYY-MM-DD
+        for item in data:
+            for campo in campos_date:
+                if campo in item and item[campo]:
+                    item[campo] = str(item[campo])[:10]
+        
         # Limpieza de campos vacíos y adición de marca de tiempo
         data = preparar_datos_para_bq(data, now)
 
         # Insertar en BigQuery (transaccional)
         errors = client.insert_rows_json(table_id, data) # type: ignore
+
+        for i, row in enumerate(data[:3]):
+            print(f"[DEBUG] Fila {i} - pte_fecha_ingreso_programa:", row.get("pte_fecha_ingreso_programa"), type(row.get("pte_fecha_ingreso_programa")))
+
         if errors:
             print("❌ Error al insertar en BigQuery. Detalles:")
             for err in errors:

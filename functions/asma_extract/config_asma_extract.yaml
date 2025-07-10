@@ -1,9 +1,9 @@
 onedrive_url: "https://1drv.ms/x/c/03c73def4fac5feb/EetfrE_vPccggANuAAAAAAABbFn-LkxXlrs7q6s51K_67Q?e=ZRSZqm&download=1"
 onedrive_sheet_name: "BASE ASMA"
+onedrive_col_final: "IZ"
 gspreadsheet_id: "1XLxI_hb_tBCg8Ko7o6VPz1haLUlOf1L4IYmVgzNqQ7I"
-gspreadsheet_id: "1XLxI_hb_tBCg8K7o6VPz1haLUlOf1L4IYmVgzNqQ7I"
 gspreadsheet_sheet_name: "Data"
-skiprows: 7
+skiprows: 6
 column_names:
   - pte_tipo_documento
   - pte_documento
@@ -117,6 +117,7 @@ column_names:
   - mes3_modalidad_atencion_rehabilitacion_pulmonar_inicio
   - mes3_caminata_6_minutos_inicial_mts
   - mes3_grupo_riesgo
+  - mes3_gravedad_enfermedad
   - mes3_fecha_valoracion_nutricion
   - mes3_requiere_seguimiento_nutricion
   - mes3_fecha_seguimiento_nutricion
@@ -217,17 +218,47 @@ column_names:
   - mes13_fecha_entrega_educacion_tics
   - mes14_fecha_entrega_educacion_tics
   - mes15_fecha_entrega_educacion_tics
+  - mes15_fecha_seguimiento
+  - mes15_tai
+  - mes15_interpretacion_tai
+  - mes15_act
+  - mes15_interpretacion_act
+  - mes15_acq
+  - mes15_interpretacion_acq
+  - mes15_exacerbaciones
+  - mes15_manejo_exacerbacion_casa_cant
+  - mes15_manejo_exacerbacion_cita_prioritaria_ino_cant
+  - mes15_manejo_exacerbacion_cita_prioritaria_no_ino_cant
+  - mes15_manejo_exacerbacion_urgencias_cant
+  - mes15_manejo_exacerbacion_hospitalizacion_cant
+  - mes15_manejo_exacerbacion_uci_cant
+  - mes15_manejo_exacerbaciones_corticosteroides
   - mes15_fecha_real_cita_neumologia
   - mes16_fecha_entrega_educacion_tics
   - mes17_fecha_entrega_educacion_tics
   - mes18_fecha_entrega_educacion_tics
-  - mes18_fecha_real_cita_neumologia
   - mes18_fecha_seguimiento
+  - mes18_tai
+  - mes18_interpretacion_tai
+  - mes18_act
+  - mes18_interpretacion_act
+  - mes18_acq
+  - mes18_interpretacion_acq
+  - mes18_exacerbaciones
+  - mes18_manejo_exacerbacion_casa_cant
+  - mes18_manejo_exacerbacion_cita_prioritaria_ino_cant
+  - mes18_manejo_exacerbacion_cita_prioritaria_no_ino_cant
+  - mes18_manejo_exacerbacion_urgencias_cant
+  - mes18_manejo_exacerbacion_hospitalizacion_cant
+  - mes18_manejo_exacerbacion_uci_cant
+  - mes18_manejo_exacerbaciones_corticosteroides
+  - mes18_fecha_real_cita_neumologia
   - total_exacerbaciones_total
   - total_exacerbaciones_leves
   - total_exacerbaciones_graves
   - total_n_entregas_educacion_tics
   - total_entregas_educacion_tics_completas
+  - total_evaluacion_adherencia
   - total_paciente_egreso_temprano
   - total_fecha_egreso_temprano
   - total_egreso
@@ -326,60 +357,30 @@ numeric_columns:
   - mes13_manejo_exacerbacion_uci_cant
   - mes12_caminata_6_minutos_final_mts
   - mes12_cambios_alcanzados_c6m
+  - mes15_tai
+  - mes15_act
+  - mes15_acq
+  - mes15_manejo_exacerbacion_casa_cant
+  - mes15_manejo_exacerbacion_cita_prioritaria_ino_cant
+  - mes15_manejo_exacerbacion_cita_prioritaria_no_ino_cant
+  - mes15_manejo_exacerbacion_urgencias_cant
+  - mes15_manejo_exacerbacion_hospitalizacion_cant
+  - mes15_manejo_exacerbacion_uci_cant
+  - mes18_tai
+  - mes18_act
+  - mes18_acq
+  - mes18_manejo_exacerbacion_casa_cant
+  - mes18_manejo_exacerbacion_cita_prioritaria_ino_cant
+  - mes18_manejo_exacerbacion_cita_prioritaria_no_ino_cant
+  - mes18_manejo_exacerbacion_urgencias_cant
+  - mes18_manejo_exacerbacion_hospitalizacion_cant
+  - mes18_manejo_exacerbacion_uci_cant
   - total_exacerbaciones_total
   - total_exacerbaciones_leves
   - total_exacerbaciones_graves
   - total_n_entregas_educacion_tics
-datetime_comuns:
+  - total_evaluacion_adherencia
+date_columns:
   - pte_fecha_nacimiento
   - pte_fecha_ingreso_programa
-  - mes0_fecha_espirometria
-  - mes0_fecha_oscilometria
-  - mes0_fecha_feno
-  - mes0_fecha_prueba_broncoprobocacion
-  - mes0_fecha_valoracion_alergologia
-  - mes0_fecha_prick_test
-  - mes0_fecha_junta_asma_para_formulacion
-  - mes0_fecha_inicio_terapia_biologica
-  - mes0_fecha_ultimo_evento_adverso
-  - mes0_fecha_entrega_plan_accion
-  - mes1_fecha_entrega_educacion_tics_mes_1
-  - mes1_fecha_seguimiento_mes_1
-  - mes2_fecha_entrega_educacion_tics_mes_2
-  - mes2_fecha_seguimiento_mes_2
-  - mes3_fecha_entrega_educacion_tics_mes_3
-  - mes3_fecha_seguimiento
-  - mes3_fecha_real_cita_neumologia_3_mes
-  - mes3_fecha_confirmacion_diagnostica
-  - mes3_fecha_estudio_diagnostico_previo
-  - mes3_fecha_valoracion_nutricion
-  - mes3_fecha_seguimiento_nutricion
-  - mes3_fecha_valoracion_psicologia
-  - mes3_fecha_seguimiento_psicologia
-  - mes4_fecha_entrega_educacion_tics
-  - mes5_fecha_entrega_educacion_tics
-  - mes6_fecha_entrega_educacion_tics
-  - mes6_fecha_seguimiento
-  - mes6_fecha_real_cita_neumologia
-  - mes7_fecha_entrega_educacion_tics
-  - mes8_fecha_entrega_educacion_tics
-  - mes9_fecha_entrega_educacion_tics
-  - mes9_fecha_seguimiento_mes
-  - mes9_fecha_real_cita_neumologia
-  - mes10_fecha_entrega_educacion_tics
-  - mes11_fecha_entrega_educacion_tics
-  - mes12_fecha_entrega_educacion_tics
-  - mes12_fecha_seguimiento
-  - mes12_fecha_espirometria
-  - mes12_fecha_real_cita_neumologia
-  - mes13_fecha_entrega_educacion_tics
-  - mes14_fecha_entrega_educacion_tics
-  - mes15_fecha_entrega_educacion_tics
-  - mes15_fecha_real_cita_neumologia
-  - mes16_fecha_entrega_educacion_tics
-  - mes17_fecha_entrega_educacion_tics
-  - mes18_fecha_entrega_educacion_tics
-  - mes18_fecha_real_cita_neumologia
-  - mes18_fecha_seguimiento
-  - total_fecha_egreso_temprano
   - total_fecha_egreso

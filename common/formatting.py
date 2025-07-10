@@ -1,5 +1,8 @@
 from datetime import datetime
 from flask import jsonify
+import numpy as np
+import pandas as pd
+import datetime
 
 def normalizar_campos_datetime(data, campos_datetime):
     """

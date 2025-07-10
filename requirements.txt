@@ -6,3 +6,7 @@ google-auth
 google-cloud-bigquery
 pyyaml
 python-dotenv
+numpy
+jsonify
+flask
+requests
